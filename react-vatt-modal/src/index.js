@@ -1,6 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
+import { Modal } from "./lib/Modal/Modal";
 
-ReactDOM.render(<div>Hello world</div>
+const container = document.getElementById('root');
 
-, document.getElementById("root"));
+// Create a root.
+const root = ReactDOM.createRoot(container);
+
+// Initial render
+root.render(<Modal />);
+
+// During an update, there is no need to pass the container again
